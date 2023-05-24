@@ -7,5 +7,7 @@
         public string Last_Name { get; set; }
         public string Document_Number { get; set; }
 
+        public ICollection<Invoice>? Products { get; set; } = default!;
+
     }
 }
