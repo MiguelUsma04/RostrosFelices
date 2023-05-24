@@ -1,3 +1,6 @@
+using Examen2.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Examen2
 {
     public class Program
@@ -8,6 +11,10 @@ namespace Examen2
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDbContext<DataContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("RostrosDB"))
+            );
 
             var app = builder.Build();
 
