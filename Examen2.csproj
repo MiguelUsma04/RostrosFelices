@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Pages\Account\" />
-    <Folder Include="Pages\Employees\" />
     <Folder Include="Pages\Services\" />
   </ItemGroup>
 
