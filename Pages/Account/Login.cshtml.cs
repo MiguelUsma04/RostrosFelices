@@ -1,7 +1,9 @@
+using Examen2.Data;
 using Examen2.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Examen2.Pages.Account
@@ -11,9 +13,9 @@ namespace Examen2.Pages.Account
         [BindProperty]
         public User User { get; set; }
 
-        private readonly SupermarketContext _context;
+        private readonly DataContext _context;
 
-        public LoginModel(SupermarketContext context)
+        public LoginModel(DataContext context)
         {
             _context = context;
         }
