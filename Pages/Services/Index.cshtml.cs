@@ -1,11 +1,13 @@
 using Examen2.Data;
 using Examen2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Examen2.Pages.Services
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly DataContext _context;
